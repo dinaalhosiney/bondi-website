@@ -125,18 +125,40 @@ img{
     color:#F8F9FA; 
     background-color: #33D1CC; 
 } 
+#menu-toggle {
+    display: none;
+}
 
+.menu {
+    display: none;
+}
 /* ================= HERO RESPONSIVE ================= */
 @media (min-width: 600px) and (max-width: 768px){
-
-    .linkes{
-        display: none;
-    }
-
-    .menu{
+    
+    .menu {
         display: block;
         color: #33D1CC;
-        font-size: 25px;
+        font-size: 23px;
+        cursor: pointer;
+    }
+
+    .linkes {
+    display: none;
+    position: absolute;
+    top: 75px;
+    right: 0;
+
+    padding: 10px 15px;
+    width: max-content;
+
+    flex-direction: column;
+    gap: 10px;
+
+    background-color: #19283F;
+}
+
+    #menu-toggle:checked ~ .linkes {
+        display: flex;
     }
      .title button{
         font-size: 14px;
@@ -147,16 +169,43 @@ img{
 }
 
 @media (max-width: 600px){
-
-    .linkes{
+     
+    #menu-toggle {
         display: none;
     }
 
-    .menu{
+    .menu {
         display: block;
         color: #33D1CC;
         font-size: 23px;
+        cursor: pointer;
     }
+
+   
+    .linkes {
+        display: none;
+        position: absolute;
+        top: 75px;
+        right: 0;
+
+        width: max-content;
+        padding: 8px 12px;
+
+        flex-direction: column;
+        gap: 8px;
+
+        background-color: #19283F;
+    }
+
+    #menu-toggle:checked ~ .linkes {
+        display: flex;
+    }
+
+   /* .menu{
+        display: block;
+        color: #33D1CC;
+        font-size: 23px;
+    }*/
     .title{
         line-height: 30px; 
         font-size: 15px; 
